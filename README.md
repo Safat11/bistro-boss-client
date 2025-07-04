@@ -15,6 +15,7 @@
 <p>code .</p>
 <p>npm run dev</p>
 <p>npm i react-responsive-carousel</p>
+<p>npm install swiper</p>
 
 </body>
 </html>
