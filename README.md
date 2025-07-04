@@ -14,6 +14,7 @@
 <p>npm i daisyui</p>
 <p>code .</p>
 <p>npm run dev</p>
+<p>npm i react-responsive-carousel</p>
 
 </body>
 </html>
