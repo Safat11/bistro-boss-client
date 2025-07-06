@@ -16,6 +16,7 @@
 <p>npm run dev</p>
 <p>npm i react-responsive-carousel</p>
 <p>npm install swiper</p>
+<p>npm i @smastrom/react-rating</p>
 
 </body>
 </html>
