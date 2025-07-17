@@ -85,7 +85,7 @@ const Login = () => {
                                 <LoadCanvasTemplate />
                                 <input onBlur={handleValidateCaptcha} type="text" name="captcha" className="input" placeholder="type the captcha above" />
                                 {/* TODO: make button disabled for captcha */}
-                                <input disabled={false} className="btn btn-primary mt-4" type="submit" value="Login" />
+                                <input disabled={disabled} className="btn btn-primary mt-4" type="submit" value="Login" />
                             </fieldset>
                         </form>
                         <p><small>New Here? <Link to="/signup">Create an account</Link></small></p>
