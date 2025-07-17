@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome } from 'react-icons/fa';
 
 const Dashboard = () => {
@@ -12,19 +12,19 @@ const Dashboard = () => {
                     Open drawer
                 </label>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side bg-[#D1A054]">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <ul className="menu  min-h-full w-80 p-4">
                     {/* Sidebar content here */}
 
-                    <li><Link><FaHome></FaHome>  User Home</Link></li>
-                    <li><Link><FaCalendarAlt></FaCalendarAlt> Reservations</Link></li>
-                    <li><Link><FaWallet></FaWallet> Payment History</Link></li>
-                    <li><Link><FaShoppingCart></FaShoppingCart> My Cart</Link></li>
+                    <li><NavLink to="/dashboard/home"><FaHome></FaHome>  User Home</NavLink></li>
+                    <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
+                    <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
+                    <li><NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart</NavLink></li>
                     <div className="divider"></div>
-                    <li><Link to="/"><FaHome></FaHome> Home</Link></li>
-                    <li><Link to="/menu">Our Menu</Link></li>
-                    <li><Link to="/order/salad">Order Food</Link></li>
+                    <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
+                    <li><NavLink to="/menu">Our Menu</NavLink></li>
+                    <li><NavLink to="/order/salad">Order Food</NavLink></li>
                 </ul>
             </div>
         </div>
