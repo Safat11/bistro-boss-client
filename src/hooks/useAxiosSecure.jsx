@@ -1,18 +1,18 @@
 // src/hooks/useAxiosSecure.js
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../providers/AuthProvider';
+import useAuth from './useAuth';
 
 
 // ✅ 1. Create axios instance and name it 'axiosSecure'
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000', 
+    baseURL: 'http://localhost:5000',
 });
 
 const useAxiosSecure = () => {
     // ✅ 3. Use AuthContext via useContext
-    const { logOut } = useContext(AuthContext);
+    const { logOut } = useAuth();
 
     // ✅ 2. Use useNavigate from React Router
     const navigate = useNavigate();
