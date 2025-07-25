@@ -51,7 +51,7 @@ const useAxiosSecure = () => {
             axiosSecure.interceptors.request.eject(requestInterceptor);
             axiosSecure.interceptors.response.eject(responseInterceptor);
         };
-    }, [logOut, navigate, axiosSecure]);
+    }, [logOut, navigate]);
 
     // ✅ Return instance outside useEffect so it’s callable in components
     return [axiosSecure];
