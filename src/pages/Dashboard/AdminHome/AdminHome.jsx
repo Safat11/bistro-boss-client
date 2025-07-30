@@ -57,6 +57,12 @@ const AdminHome = () => {
         );
     };
 
+    const pieChartData = chartData.map(data => ({
+        name: data.category, // this will be shown in the legend
+        value: data.count     // this will be used for the chart slices
+    }));
+
+
     return (
         <div className="w-full m-4">
             <h2 className="text-3xl">Hi, {user.displayName}</h2>
@@ -166,6 +172,7 @@ const AdminHome = () => {
                             {chartData.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                             ))}
+
                         </Bar>
                     </BarChart>
                 </div>
@@ -173,22 +180,23 @@ const AdminHome = () => {
                 {/* PieChartWithCustomizedLabel */}
                 <div className="w-1/2">
                     <PieChart width={400} height={400}>
-                        <Legend></Legend>
+                        <Legend />
                         <Pie
-                            data={chartData}
+                            data={pieChartData}
                             cx="50%"
                             cy="50%"
                             labelLine={false}
                             label={renderCustomizedLabel}
                             outerRadius={80}
                             fill="#8884d8"
-                            dataKey="count"
+                            dataKey="value" // show slices based on count 
                         >
-                            {chartData.map((entry, index) => (
-                                <Cell name={entry.category} key={`cell-${index}`} fill={colors[index % colors.length]} />
+                            {pieChartData.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                             ))}
                         </Pie>
                     </PieChart>
+
                 </div>
             </div>
         </div>
@@ -196,3 +204,4 @@ const AdminHome = () => {
 };
 
 export default AdminHome;
+
