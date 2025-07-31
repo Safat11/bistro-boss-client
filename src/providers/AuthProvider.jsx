@@ -3,7 +3,6 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import { app } from "../firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 import axios from "axios";
-import { data } from "react-router-dom";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -47,7 +46,7 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser) {
-                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+                axios.post('https://bistro-boss-server-cejxw3d6b-amran-hossains-projects-83f8c215.vercel.app/jwt', { email: currentUser.email })
                     .then(data => {
                         // console.log(data.data.token)
                         localStorage.setItem('access-token', data.data.token)

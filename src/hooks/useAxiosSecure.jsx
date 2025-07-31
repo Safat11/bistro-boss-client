@@ -7,7 +7,7 @@ import useAuth from './useAuth';
 
 // ✅ 1. Create axios instance and name it 'axiosSecure'
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://bistro-boss-server-cejxw3d6b-amran-hossains-projects-83f8c215.vercel.app',
 });
 
 const useAxiosSecure = () => {

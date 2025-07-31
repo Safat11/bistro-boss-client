@@ -15,7 +15,7 @@ const AllUsers = () => {
     });
 
     const handleMakeAdmin = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://bistro-boss-server-cejxw3d6b-amran-hossains-projects-83f8c215.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
