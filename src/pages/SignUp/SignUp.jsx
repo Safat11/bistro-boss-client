@@ -31,7 +31,7 @@ const SignUp = () => {
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email }
-                        fetch('https://bistro-boss-server-cejxw3d6b-amran-hossains-projects-83f8c215.vercel.app/users', {
+                        fetch('https://bistro-boss-server-five-gold.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
